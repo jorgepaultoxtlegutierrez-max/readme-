@@ -1,4 +1,10 @@
- {"texto": "¿Quién escribió 'Romeo y Julieta'?",
+import streamlit as st
+
+# ==================================
+# 1️⃣ BASE DE DATOS - 9 PREGUNTAS
+# ==================================
+
+preguntas = [ {"texto": "¿Quién escribió 'Romeo y Julieta'?",
      "opciones": ["Shakespeare", "Cervantes", "Lorca", "Dante"],
      "correcta": "Shakespeare"},
 
