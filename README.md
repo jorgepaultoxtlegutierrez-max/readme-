@@ -43,8 +43,7 @@ preguntas = [
 ]
 
 # ==================================
-# 2️⃣ INTERFAZ
-# ==================================
+
 
 st.title("📚 Examen de Cultura General")
 st.write("✔ Cada acierto suma 1 punto")
@@ -67,8 +66,6 @@ with st.form("quiz_form"):
 
     boton_enviar = st.form_submit_button("Entregar examen")
 
-# ==================================
-# 3️⃣ CORRECCIÓN
 # ==================================
 
 if boton_enviar:
@@ -103,8 +100,7 @@ if boton_enviar:
     st.header(f"📊 Nota final: {nota} / 10")
 
     # ==================================
-    # 4️⃣ FEEDBACK
-    # ==================================
+    
 
     if nota < 2:
         st.error("Muy insuficiente 😟 Debes repasar todo el contenido.")
