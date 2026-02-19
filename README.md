@@ -1,31 +1,4 @@
-import streamlit as st
-
-# ==================================
-# 1️⃣ BASE DE DATOS - 9 PREGUNTAS
-# ==================================
-
-preguntas = [
-    {"texto": "¿Cuál es la capital de Italia?",
-     "opciones": ["Roma", "Milán", "Venecia", "Florencia"],
-     "correcta": "Roma"},
-
-    {"texto": "¿Quién descubrió América en 1492?",
-     "opciones": ["Cristóbal Colón", "Magallanes", "Napoleón", "Julio César"],
-     "correcta": "Cristóbal Colón"},
-
-    {"texto": "¿Cuál es el océano más grande del mundo?",
-     "opciones": ["Atlántico", "Índico", "Pacífico", "Ártico"],
-     "correcta": "Pacífico"},
-
-    {"texto": "¿Cuántos continentes hay?",
-     "opciones": ["5", "6", "7", "8"],
-     "correcta": "7"},
-
-    {"texto": "¿Qué planeta es conocido como el planeta rojo?",
-     "opciones": ["Marte", "Venus", "Saturno", "Mercurio"],
-     "correcta": "Marte"},
-
-    {"texto": "¿Quién escribió 'Romeo y Julieta'?",
+ {"texto": "¿Quién escribió 'Romeo y Julieta'?",
      "opciones": ["Shakespeare", "Cervantes", "Lorca", "Dante"],
      "correcta": "Shakespeare"},
 
@@ -43,9 +16,10 @@ preguntas = [
 ]
 
 # ==================================
+# 2️⃣ INTERFAZ
+# ==================================
 
-
-st.title("📚 Examen de Cultura General")
+st.title("📚 Examen Interactivo de Cultura General")
 st.write("✔ Cada acierto suma 1 punto")
 st.write("❌ Cada error resta 0.5 puntos")
 st.write("➖ En blanco no suma ni resta")
@@ -66,6 +40,8 @@ with st.form("quiz_form"):
 
     boton_enviar = st.form_submit_button("Entregar examen")
 
+# ==================================
+# 3️⃣ CORRECCIÓN
 # ==================================
 
 if boton_enviar:
@@ -100,7 +76,8 @@ if boton_enviar:
     st.header(f"📊 Nota final: {nota} / 10")
 
     # ==================================
-    
+    # 4️⃣ FEEDBACK
+    # ==================================
 
     if nota < 2:
         st.error("Muy insuficiente 😟 Debes repasar todo el contenido.")
